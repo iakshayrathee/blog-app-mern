@@ -25,6 +25,13 @@ methods: 'GET, POST, PUT, DELETE', // Specify the allowed HTTP methods
 allowedHeaders: 'Content-Type, Authorization', // Specify the allowed headers
 credentials: true // Allow credentials
 }));
+
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
