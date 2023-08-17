@@ -19,8 +19,7 @@ const secret = "asdfe45we45w345wegw345werjktjwertkj";
 dotenv.config();
 const BASE_URL = process.env.BASE_URL;
 
-app.use(cors({ credentials: true, origin: "*"},
-res.setHeader("Access-Control-Allow-Origin", "*")  ));
+app.use(cors({ credentials: true, origin: "*" }));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
