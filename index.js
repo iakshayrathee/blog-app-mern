@@ -28,10 +28,9 @@ credentials: true // Allow credentials
 
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', `${BASE_URL}`); // Replace with your frontend's domain
   next();
 });
-
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
