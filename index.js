@@ -19,7 +19,7 @@ const secret = "asdfe45we45w345wegw345werjktjwertkj";
 dotenv.config();
 const BASE_URL = process.env.BASE_URL;
 
-app.use(cors({ credentials: true, origin: "https://64dde17eee58145eb41ac80a--magical-tapioca-1d9ecf.netlify.app/" }));
+app.use(cors({ credentials: true, origin: `${BASE_URL}` }));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
