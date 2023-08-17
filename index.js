@@ -20,7 +20,7 @@ dotenv.config();
 const BASE_URL = process.env.BASE_URL;
 
 app.use(cors({ credentials: true, origin: "*" },
-            res.headers('Access-Control-Allow-Origin', '*')
+            res.header('Access-Control-Allow-Origin', '*')
             ));
 app.use(express.json());
 app.use(cookieParser());
