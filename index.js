@@ -20,7 +20,7 @@ dotenv.config();
 const BASE_URL = process.env.BASE_URL;
 
 app.use(cors({
-origin: `${BASE_URL}`, // Specify the allowed origin
+origin: "https://neon-fenglisu-96e635.netlify.app/", // Specify the allowed origin
 methods: 'GET, POST, PUT, DELETE', // Specify the allowed HTTP methods
 allowedHeaders: 'Content-Type, Authorization', // Specify the allowed headers
 credentials: true // Allow credentials
