@@ -36,7 +36,7 @@ app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
 
 mongoose.connect(
-  "mongodb+srv://iakshayrathee:89akshayrathee@cluster0.1tchfxq.mongodb.net/?retryWrites=true&w=majority"
+  process.env.MONGO_URL
 );
 
 // app.use(express.static(path.join(__dirname, "./client/build")));
